@@ -72,7 +72,7 @@ pip instal -r requirements.txt
     * matplotlib.pyplot
 
 ```
-import [nome_biblioteca] as [abraviação]
+import [nome_biblioteca] as [abreviação]
 ```
 
 3. Carregar o [dataset](titanic_v2.csv).
