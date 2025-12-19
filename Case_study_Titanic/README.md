@@ -1,5 +1,5 @@
 # Previsão da sobrevivência no Titanic
-![Titanic](titanic_image.jpg)
+![Titanic](./imagens/titanic_image.jpg)
 ---
 
 Projeto de análise do caso Titanic, que afundou em 1912, resultando numa das maiores tragédias marítimas já registadas. O objetivo será fazer uma previsão da probabilidade de sobrevivência com base nas características dos tripulantes.
@@ -50,7 +50,7 @@ Criar Virtual environment com:
 
         2.Clique [aqui](https://www.youtube.com/watch?v=8cAEH1i_5s0) e siga as instruções do video.   
 
-    ![Python download](Python_site.png)
+    ![Python download](./imagens/Python_site.png)
     <br>
 2. Dependências:
 
@@ -91,12 +91,12 @@ Correr o programa linha a linha para visualizar os resultados.
 
 ##### Legenda das variáveis
 
-![dicionario_dataset](dicionario_dataset_1.png)
-![dicionario_dataset](dicionario_dataset_2.png)
+![dicionario_dataset](./imagens/dicionario_dataset_1.png)
+![dicionario_dataset](./imagens/dicionario_dataset_2.png)
 
 **`df.info()`**
 
-![info do dataset](Dataset_original.png)
+![info do dataset](./imagens/Dataset_original.png)
 
 O dataset original tem um formato de 891 linhas por 12 colunas.
 Das 12 colunas tem colunas do tipo float64 (2), int64(5), object(5), das quais 9 não apresentam valores nulos.
@@ -148,7 +148,7 @@ df2['embarked'] = df2['embarked'].apply(local_embarque)
 
 Adicionalmente foi reduzido o espaço na memória (19.1 KB), de modo a que a velocidade de processamento aumente,ficando com 2 tipos de dados, float64 nas colunas 'age' e 'fare', int64 nas restantes.
 
-![Dataset após tratamento de dados](dataset_apos_tratamento.png)
+![Dataset após tratamento de dados](./imagens/dataset_apos_tratamento.png)
 
 [:top: índice](#indíce)
 
@@ -159,7 +159,7 @@ Sabendo de ante-mão que o que se pretende estudar é a probabilidade de sobrevi
 
 #### Tabela descritiva
 
-![Análise Descritiva dos dados](Análise_descritiva_dados.png)
+![Análise Descritiva dos dados](./imagens/Análise_descritiva_dados.png)
 
 Nesta tabela pode-se observar onde podem existir 'Outliers', onde o desvio-padrão é bastante elevado e onde metade dos dados (25-75%) estão concentrados em intervalos pequenos, como nas colunas 'age', 'sibsp', 'parch' e 'fare'.
 
@@ -168,7 +168,7 @@ Nesta tabela pode-se observar onde podem existir 'Outliers', onde o desvio-padr�
 
 #### Tabela de correlação
 
-![Tabela de correlação inter-veriável](tabela_correlacao.png)
+![Tabela de correlação inter-veriável](./imagens/tabela_correlacao.png)
 
 ###### Observação:
 
@@ -186,13 +186,13 @@ Foi elaborado o modelo com 80% dos dados do dataframe, escolhidos aleatoriamente
 
 ##### Interpretação dos resultados do modelo
 
-![tabela resumo do modelo](Resumo_do_modelo.png)
+![tabela resumo do modelo](./imagens/Resumo_do_modelo.png)
 
 Ao interpretar a tabela resumo, é de destacar os coeficientes da 'pclass' (-1.05), 'sibsp' (-0.38) e 'male' (-2.66) que mais peso têm sobre o modelo, sendo estas estatisticamente significativas em relação á variável resposta (P>|z| < 0.05).
 
 ##### Matriz confusão (Avaliação do modelo)
 
-![Matriz confusão](matriz_confusao.png)
+![Matriz confusão](./imagens/matriz_confusao.png)
 
 Ao se avaliar os valores trazidos pela matriz confusão, pode-se observar que os verdadeiros positivos (VP) e os verdadeiros negativos (VN) se encontram com uma coloração mais clara, dizendo-nos que o cruzamento entre o que foi previsto e o que realmente aconteceu esteve em concordância, isto é, foram iguais.
 Quanto aos Falsos Positivos (FP) e aos Falsos Negativos (FN), com uma coloração escura diz-nos que foram poucos os resultados que não coincidiram com a realidade.
@@ -207,7 +207,7 @@ Ao serem inseridos os dados exógenos de teste no modelo, foi definido como resu
 
 Para comparar os resultados previstos com as observações feitas para os mesmos dados foi feita a tabela cruzada.
 
-![Tabela cruzada de dados](tabela_cruzada_resultados.png)
+![Tabela cruzada de dados](./imagens/tabela_cruzada_resultados.png)
 
 ###### Observação
 
