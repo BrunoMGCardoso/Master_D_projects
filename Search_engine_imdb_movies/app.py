@@ -75,6 +75,8 @@ with col1:
            
         nome_filme = st.text_input('Nome do Filme:', placeholder= 'Escreva aqui o nome do filme', width = 500)
         
+        semelhanca_min = st.slider('Semelhança mínima', 0, 100)
+        
     # Criação do botão para a pesquisa
     botao_pesquisar = st.button('Pesquisar', type='primary')
     
@@ -119,13 +121,14 @@ with col1:
             # --- Quando se tem a opção Nome.
             elif opcao_pesquisa == 'Nome':
             
-                # Para que os termos da pesquisa tenham pelo menos 3 caracteres.    
-                if len(nome_filme) >= 3:
+                # Para que os termos da pesquisa tenham pelo menos 3 caracteres. 
+                # Adiciona-se o método strip para eliminar os espaços.    
+                if len(nome_filme.strip()) >= 3:
                     
                     st.warning('ATENÇÃO: O texto é sensivel a maiúsculas!')
                     
                     # Tupla dos resultados obtidos
-                    resultado = busca.busca(nome_filme, df_filmes, 'Movie Name', semelhanca = 80)
+                    resultado = busca.busca(nome_filme, df_filmes, 'Movie Name', semelhanca = semelhanca_min)
                     
                     for nome, corr, index in resultado:
                         st.write(f'✅ {nome} (Semelhança: {corr :.1f} %)')
