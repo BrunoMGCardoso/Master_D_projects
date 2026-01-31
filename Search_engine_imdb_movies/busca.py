@@ -51,7 +51,19 @@ def listagem(indices, data_frame):
     return st.session_state.resultado_pesquisa
 
 def mostrar_filmes(lista):
+    '''Docstrings
+    Mostragem de lista dos filmes
     
+    Ao acessar a uma lista/dicionário, mostra todos filmes presentes na mesma.
+    
+    Args:
+    
+        lista (list): lista de filmes.
+        
+    Return:
+
+        string: imprime cada um dos filmes presentes na lista
+    '''
     with st.container(height=300):
         
         for item in lista:
